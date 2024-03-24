@@ -1,0 +1,518 @@
+/* Estilos Gerais */
+*{
+    margin:0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sem serifa;
+}
+
+body {
+    background-color: black;
+    height: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.interface {
+    max-width: 1280px;
+    margin:0 auto;
+}
+
+h2.titulo2 {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+/* Estilos Cabeçalho */
+
+
+header {
+    padding: 40px 4%;
+}
+
+header a {
+    color:  white;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+header nav  a:hover{
+    
+    transform: scale(1.07);
+}
+
+header ul li a:hover{
+    color: rgba(40, 252, 3, 0.99);
+    
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul  li  {
+    display: inline-block;
+    padding: 0 80px;
+    list-style: none;
+    font-size: 18px;
+}
+
+header .btn-contato   {
+    color: white;
+    border: 0;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color:  rgba(40, 252, 3, 0.99);
+} 
+
+ .btn-contato:hover {
+    transform: scale(1.07);
+    transition: 0.2s;
+    box-shadow: 0 0 10px rgba(245, 247, 245, 0.99);
+}
+
+.card-left  .btn-contato{
+    background-color:  rgba(40, 252, 3, 0.99);
+    color: white;
+    border: 0;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Estilo TOPO-SITE */
+section.topo-site {
+   padding: 100px 4%;
+}
+
+section.topo-site .flex {  
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-site  h1 {
+    color: white;
+    font-size: 48px;
+    line-height: 55px;
+    font-family: 'Sixtyfour', sans-serif;
+}
+
+.topo-site .card-left p {
+    margin: 40px 0;
+    color : white;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.card-left .contato-icons ul   {
+    display:flex;
+    gap: 25px;
+    
+}
+
+
+section .card-right img {
+    height: 350px;
+    border: 4px solid rgba(40, 252, 3, 0.99);
+    box-shadow: 0 0 15px rgba(162, 214, 162, 0.99);
+    border-radius: 700px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 35px;
+    }
+}
+
+/* Estilo Skills */
+
+.skills {
+    padding: 100px 4%;
+}
+
+
+.skills h2 span {
+    
+    color: rgba(40, 252, 3, 0.99);
+}
+
+.skills .skills-icons ul {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.skills .skills-icons svg {
+    box-shadow: 0 0 10px rgba(245, 247, 245, 0.99);
+    border-radius: 10px ;
+    
+}
+
+/* Estilo About-me */
+section.about-me {
+    color: white;
+    padding: 150px 4%;
+}
+
+section.about-me .flex {  
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+section.about-me .about-right h2 {
+   font-size: 35px;
+   margin-bottom: 25px;
+
+}
+
+section.about-me .about-right p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+/* Estilo de sub tiutlo com animação */
+section.about-me .about-right span {
+    position:relative;
+}
+
+section.about-me .about-right span::before {
+    content: "";
+    color: rgba(40, 252, 3, 0.99);
+    animation: digitacao-titulo 20s infinite;
+    
+} 
+
+section.about-me .about-right span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    right: -10px;
+    border-left: 2px solid rgba(40, 252, 3, 0.99);
+    opacity: 1;
+    animation: cursor .8s infinite, digita 20s steps(20) infinite ;
+    width: calc(100% + 8px);
+    background-color: black;
+}
+
+
+@keyframes digita {
+    20%, 30%, 60%, 70%{
+        width: 0;
+    }
+    10%, 40%, 50%, 80%, 90%{
+        width: calc(100% + 8px);
+    }
+}
+
+@keyframes cursor {
+    0%{
+        border-left: 2px solid black;
+    }
+}
+
+
+@keyframes digitacao-titulo {
+    0%,50%{
+        content: ",sou Melcksedeck";
+    }
+    51%,100% {
+        content: ", e isso é um pouco sobre mim";
+    }
+}
+/* Estilo de img */
+section .about-left img {
+    height: 350px;
+    border: 4px solid rgba(40, 252, 3, 0.99);
+    box-shadow: 0 0 15px rgba(162, 214, 162, 0.99);
+    border-radius: 700px;
+}
+ /* Estilos - Meus projetos */
+ section .titulo2 span {
+    color: rgba(40, 252, 3, 0.99);
+}
+
+section.projetos{
+    padding: 100px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1b;
+}
+
+section.projetos .flex{
+    gap:100px;
+    margin-top: 60px
+}
+
+ section.projetos a img{
+    width: 360px;
+    height: 460px;
+    border-radius: 40px;
+ }
+
+.img-project {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 85% 0%;
+    cursor: pointer;
+    border-radius: 40px ;
+    position: relative;
+
+}
+
+.img-project img:hover {
+    opacity: 0.5;
+    transition: 0.7s;
+    transform: scale(1.03);
+}
+
+
+/* Estilos de Contato */
+section.contato{
+    padding:  80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+form input, form textarea {
+    
+    width: 100%;
+    background-color: rgba(46, 46, 46, 0.212);
+    border: 0;
+    outline: 0;
+    border-radius: 25px;
+    padding: 20px 15px;
+
+    
+    font-size: 18px;
+}
+
+form .input-number::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+}
+
+form textarea {
+    resize: none;
+    max-height: 150px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    
+    background-color: rgba(40, 252, 3, 0.99);
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+
+form .btn-enviar input:hover {
+    transform: scale(1.07);
+    transition: 0.2s;
+    box-shadow: 0 0 10px rgba(245, 247, 245, 0.99);
+}
+
+/* Estilo Footer */
+
+footer{
+    width: 100%;
+    padding: 20px 4%;
+    box-shadow: 0 0 40px 5px #ffffff1b;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+   
+}
+
+footer .footer-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+footer .footer-email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+footer .footer-line .footer-icons ul li {
+    display: inline;
+    padding: 0 10px;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1200px) {
+    /* cabeçalho */
+    .menu-desktop, .btn-contato {
+        display: none;
+    }
+
+    /* classes gerais */
+    .flex {
+        flex-direction: column;
+    }
+
+    h2.titulo2 {
+        font-size: 28px;
+    }
+
+    .topo-site .flex {
+        flex-direction: column-reverse;
+    }
+
+   
+
+    /* Topo do site */
+    .topo-site .card-left p {
+        margin: 10px 0;
+        padding: 10px 0% 4% 10px;
+        font-size: 17px;
+    }
+
+    .card-left .contato-icons ul   {
+        margin-left: 15px;    
+    } 
+
+    section.topo-site .flex {  
+        align-items: center;
+        justify-content: center;
+        gap: 45px;
+    }
+    
+    section.topo-site {
+        padding: 20px 5%;
+     }
+
+    .topo-site  h1 {
+        font-size: 28px;
+    }
+
+    /* Imagem */
+    section .card-right img {
+        height: 300px ;
+    }
+    .about-left .img-about {
+      
+       height: 300px;
+    }
+
+    /* Icons */
+    .skills .skills-icons ul {
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
+    /* About */
+
+    section.about-me {
+        padding: 55px 4%;
+    }
+    
+    /* Animação */
+    section.about-me h2 {
+        text-align: center;
+    }
+
+    section.about-me .about-right span::before{
+        animation: none;
+    }
+
+    section.about-me .about-right span::after {
+        animation: none;
+        opacity: 0;
+    }
+
+    /* Projetos */
+    section.projetos{
+        padding: 30px 4%;
+        box-shadow: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    section.projetos .flex{
+        gap: 30px;
+        margin-top: 60px
+    }
+    
+    .img-project {
+        
+        background-position:75% 0%;
+    }
+    
+    section.projetos a img{
+        width: 300px;
+        height: 300px;
+        border-radius: 40px;
+     }
+    
+    
+    .img-project img:hover {
+        opacity: 0.5;
+        transition: 0.7s;
+        transform: scale(1.02);
+    }
+
+    /* footer */
+    footer {
+        box-shadow: none;
+    }
+
+    footer .footer-line {
+        gap:0px
+    }
+
+    footer .footer-line .footer-icons ul {
+        display: flex;
+        gap:15px;
+        
+    }
+
+    footer .footer-line .footer-icons ul li {
+        padding: 0px;
+    }
+
+    footer .footer-line ul li a svg{
+        width: 25px;
+    }
+    
+}
+
